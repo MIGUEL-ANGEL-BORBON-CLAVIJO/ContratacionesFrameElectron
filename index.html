@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Hello from Electron renderer!</title>
+  </head>
+  <body>
+    <nav class="sidebar">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="./imagenes/sena.ico" alt="logo" class="logo">
+                </span>
+                <div class="text header-text">
+                    <span class="institucion">SENA</span>
+                    <br>
+                    <span class="sede">CENIGRAF</span>
+                </div>
+                    <img src="./imagenes/despliegeNav.svg" alt="despliegeNav" class="despliegeNav">
+                </div>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="buscar">
+                        <img src="./imagenes/buscar.svg" alt="" class="icon">
+                        <input type="search" placeholder="Search...">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <img src="./imagenes/home.svg" alt="" class="icon">
+                            <span class="text nav-text">Inicio</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                      <a href="#">
+                          <img src="./imagenes/registrar.svg" alt="" class="icon">
+                          <span class="text nav-text">Registros</span>
+                      </a>
+                    </li>
+                    <li class="nav-link">
+                      <a href="#">
+                          <img src="./imagenes/movimientos.svg" alt="" class="icon">
+                          <span class="text nav-text">Movimientos</span>
+                      </a>
+                    </li>
+                    <li class="nav-link">
+                      <a href="#">
+                          <img src="./imagenes/buscar.svg" alt="" class="icon">
+                          <span class="text nav-text">Busqueda</span>
+                      </a>
+                    </li>
+                    <li class="nav-link">
+                      <a href="#">
+                          <img src="./imagenes/ayuda.svg" alt="" class="icon">
+                          <span class="text nav-text">Ayuda</span>
+                      </a>
+                    </li>
+                </ul>
+            </div>
+           <div class="buttom-content">
+              <li class="nav-link">
+                <a href="#">
+                    <img src="./imagenes/cerrarSesion.svg" alt="" class="icon">
+                    <span class="text nav-text">Cerrar Sesion</span>
+                </a>
+              </li>
+
+              <li class="mode">
+                <div class="moon-sun">
+                  <img src="./imagenes/noche.svg" alt="" class="icon">
+                  <img src="./imagenes/dia.svg" alt="" class="icon">
+                </div>
+                <span class="mode-text text" >Noche & Dia</span>
+                <div class="togle-switch">
+                  <span class="switch"></span>
+                </div>
+              </li>
+           </div> 
+        </div>
+    </nav>
+  </body>
+</html>
