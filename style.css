@@ -22,6 +22,14 @@ body{
     height: 100vh;
     background: var(--body-color);
 }
+body.dark{
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3A3B3C;
+    --primary-color-ligth: #3A3B3C;
+    --togglee-color: #FFF;
+    --text-color: #CCC;
+}
 .sidebar .text{
     font-size: 16px;
     font-weight: 500;
@@ -129,4 +137,63 @@ a{
     padding-right: 10%;
     padding-left: 10%;
     color: var(--sidebar-color);
+}
+.sidebar .menu-bar{
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.menu-bar .mode{
+    background: var(--primary-color-ligth);
+}
+.menu-bar .mode .moon-sun{
+    height: 50px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+}
+.menu-bar .mode .moon-sun .sun{
+    opacity: 0;
+}.menu-bar .mode img {
+    position: absolute;
+}
+
+.menu-bar .mode .toggle-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-width: 60px;
+    cursor: pointer;
+}
+
+.toggle-switch .switch {
+    position: relative;
+    height: 22px;
+    width: 44px;
+    border-radius: 25px;
+    background: var(--togglee-color);
+    transition: var(--tran-03);
+}
+
+.switch::before {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background: var(--sidebar-color);
+    transition: var(--tran-03);
+}
+
+body.dark .switch::before {
+    left: 25px;
+}
+
+body.dark .switch {
+    background: var(--active-toggle-color); /* Cambia el color del toggle cuando está en modo oscuro */
 }

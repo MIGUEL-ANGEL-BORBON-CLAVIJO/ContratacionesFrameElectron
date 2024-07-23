@@ -11,16 +11,17 @@
       http-equiv="X-Content-Security-Policy"
       content="default-src 'self'; script-src 'self'"
     />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css;">
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Hello from Electron renderer!</title>
   </head>
-  <body>
+  <body class="dark">
     <nav class="sidebar">
         <header>
             <div class="image-text">
                 <span class="image">
-                    <img src="./imagenes/sena.ico" alt="logo" class="logo">
+                    <img src="./imagenes/sena.ico" alt="logo" class="logo no-invert">
                 </span>
                 <div class="text header-text">
                     <span class="institucion">SENA</span>
@@ -79,16 +80,17 @@
 
               <li class="mode">
                 <div class="moon-sun">
-                  <img src="./imagenes/noche.svg" alt="" class="icon">
-                  <img src="./imagenes/dia.svg" alt="" class="icon">
+                  <img src="./imagenes/noche.svg" alt="" class="icon moon" id="moon">
+                  <img src="./imagenes/dia.svg" alt="" class="icon sun" id="sun">
                 </div>
-                <span class="mode-text text" >Noche & Dia</span>
-                <div class="togle-switch">
-                  <span class="switch"></span>
+                <span class="mode-text text">Noche & Dia</span>
+                <div class="toggle-switch">
+                  <span class="switch click"></span>
                 </div>
               </li>
            </div> 
         </div>
     </nav>
+    <script src="nav.js"></script>
   </body>
 </html>
